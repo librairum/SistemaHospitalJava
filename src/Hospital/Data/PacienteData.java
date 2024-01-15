@@ -20,23 +20,23 @@ public class PacienteData {
         lista.add(p);
         JOptionPane.showMessageDialog(null, "Registrado");
     }
-    public void Actualizar(Paciente p){
-        for(int i = 0 ; i < lista.size(); i++){
-            if(p.getCodigo() == lista.get(i).getCodigo()){
+    public void Actualizar(Paciente p, String nombres, String apellidos, String telefono, String dni) {
+        for (int i = 0; i < lista.size(); i++) {
+            if (p.getCodigo() == lista.get(i).getCodigo()) {
                 Paciente registro = lista.get(i);
-                registro.setNombres(p.getNombres());
-                registro.setApelidos(p.getApelidos());
-                registro.setTelefono(p.getTelefono());
-                registro.setDni(p.getDni());
+                DatosPersonales nuevosDatos = obtenerDatosPersonales(nombres, apellidos, telefono, dni);
+                registro.setDatosPersonales(nuevosDatos);
             }
         }
     }
-    public void Eliminar(Paciente p)
-    {
-        for(int i = 0; i < lista.size(); i++)
-        {
-            if(p.getCodigo() == lista.get(i).getCodigo()){
-                
+
+    private DatosPersonales obtenerDatosPersonales(String nombres, String apellidos, String telefono, String dni) {
+        return new DatosPersonales(nombres, apellidos, telefono, dni);
+    }
+
+    public void Eliminar(Paciente p) {
+        for (int i = 0; i < lista.size(); i++) {
+            if (p.getCodigo() == lista.get(i).getCodigo()) {
             }
         }
     }

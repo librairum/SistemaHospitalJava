@@ -4,6 +4,9 @@
  */
 package Hospital.Entities;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 /**
  *
  * @author IVAN
@@ -13,11 +16,12 @@ public class Hospitalizacion {
     private int codigopaciente;
     private int codigoempleado;
     private int numerocama;
-    private String fechallegada;
-    private String horallegada;
-    private String fechasalida;
-    private String horasalida;
+    private LocalDate fechallegada;
+    private LocalTime horallegada;
+    private LocalDate fechasalida;
+    private LocalTime horasalida;
     private int estaod;
+
 
     /**
      * @return the codigohospitalizacion
@@ -78,56 +82,56 @@ public class Hospitalizacion {
     /**
      * @return the fechallegada
      */
-    public String getFechallegada() {
+    public LocalDate getFechallegada() {
         return fechallegada;
     }
 
     /**
      * @param fechallegada the fechallegada to set
      */
-    public void setFechallegada(String fechallegada) {
+    public void setFechallegada(LocalDate fechallegada) {
         this.fechallegada = fechallegada;
     }
 
     /**
      * @return the horallegada
      */
-    public String getHorallegada() {
+    public LocalTime getHorallegada() {
         return horallegada;
     }
 
     /**
      * @param horallegada the horallegada to set
      */
-    public void setHorallegada(String horallegada) {
+    public void setHorallegada(LocalTime horallegada) {
         this.horallegada = horallegada;
     }
 
     /**
      * @return the fechasalida
      */
-    public String getFechasalida() {
+    public LocalDate getFechasalida() {
         return fechasalida;
     }
 
     /**
      * @param fechasalida the fechasalida to set
      */
-    public void setFechasalida(String fechasalida) {
+    public void setFechasalida(LocalDate fechasalida) {
         this.fechasalida = fechasalida;
     }
 
     /**
      * @return the horasalida
      */
-    public String getHorasalida() {
+    public LocalTime getHorasalida() {
         return horasalida;
     }
 
     /**
      * @param horasalida the horasalida to set
      */
-    public void setHorasalida(String horasalida) {
+    public void setHorasalida(LocalTime horasalida) {
         this.horasalida = horasalida;
     }
 
