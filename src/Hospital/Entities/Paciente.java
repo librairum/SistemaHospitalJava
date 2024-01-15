@@ -4,6 +4,7 @@
  */
 package Hospital.Entities;
 
+import Hospital.Data.DatosPersonales;
 import java.util.*;
 import javax.swing.JOptionPane;
 
@@ -20,6 +21,7 @@ public class Paciente {
     public static int cantregistros = 0;
     public static String mensaje = "Hola Mundo";
     public static List<Paciente> lista = new ArrayList<Paciente>();
+    private DatosPersonales datosPersonales;
     /**
      * @return the codigo
      */
@@ -174,6 +176,14 @@ public class Paciente {
      */
     public void setNombres(String nombres) {
         this.nombres = nombres;
+    }
+    
+    public DatosPersonales getDatosPersonales() {
+        return datosPersonales;
+    }
+
+    public void setDatosPersonales(DatosPersonales datosPersonales) {
+        this.datosPersonales = datosPersonales;
     }
     
 

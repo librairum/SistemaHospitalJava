@@ -45,24 +45,12 @@ public class EmpleadoData {
         }
         
     }
-    public void Actualizar(Empleado e){        
-        for(int i = 0 ; i < lista.size(); i++){
-            
-            if(e.getCodigo() == lista.get(i).getCodigo()){               
-                Empleado registro = lista.get(i);                
-                registro.setNombres(e.getNombres());
-                registro.setApellidos(e.getApellidos());
-                registro.setTipo(e.getTipo());
-                registro.setTurno(e.getTurno());
-                registro.setLogin(e.getLogin());
-                registro.setPassword(e.getPassword());
-                String  nsj = registro.getNombres() + "\n"+
-                        registro.getApellidos() + "\n"+
-                        registro.getTipo() + "\n"+
-                        registro.getTurno()+"\n"+
-                        registro.getLogin()+ "\n";
-                //JOptionPane.showMessageDialog(null, "Registro actualizado");
-                JOptionPane.showMessageDialog(null, nsj);
+    public void Actualizar(Empleado e) {
+        for (int i = 0; i < lista.size(); i++) {
+            if (e.getCodigo() == lista.get(i).getCodigo()) {
+                Empleado registro = lista.get(i);
+                EmpleadoUpdater updater = new EmpleadoUpdater(registro, e);
+                updater.actualizarEmpleado();
                 return;
             }
         }
